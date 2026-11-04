@@ -40,14 +40,18 @@ both files, while the range and number of points of the frequency and the
 seed for the random noise only for the generation, while the constant
 conditions for the analysis.\
 To run the desired file with the chosen configuration file, the user can use
-the command
+the command in the command line
 ```
 python3 Image_treatment.py --config=<configuration_file_name>
 ```
-where `<confi_file_name>` is the name, without the `.ini` extention, of the
-configuration file. This is done in order to keep track of the input settings
-given to the program, but it is optional, with the default value of
-`configuration_settings`.
+or with
+```
+run Image_treatment.py --config=<configuration_file_name>
+```
+if you are in Spyder. `<confi_file_name>` is the name, without the
+`.ini` extention, of the configuration file. This is done in order to keep
+track of the input settings given to the program, but it is optional, with
+the default value of `configuration_settings`.
 
 ## Structure
 The library is divided in 2 modules:
