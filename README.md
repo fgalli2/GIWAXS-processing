@@ -1,9 +1,11 @@
 # GIWAXS-processing
 A repository containing the python project for the analysis of GIWAXS edf (raw) files.
 
+
 ## Core features
 The code heavily relies on the `pyFAI` module for processing, to get from the `edf`
 files to the general plots in GIWAXS measurements
+
 
 ## Installment and Requirements
 To install the application clone the repository with
@@ -31,31 +33,31 @@ and on the following scientific libraries:
 - `fabio`
 - `pyFAI`
 
+
 ## Usage
-To use the library, either to generate or to analyze the data, the user can
-set all the input information (which are specified throughout `Tutorial_0`)
-in a configuration file, i.e. a file with the `.ini` extention.
-This regards the circuit diagram, the parameters, and the data file name for
-both files, while the range and number of points of the frequency and the
-seed for the random noise only for the generation, while the constant
-conditions for the analysis.\
+To use the library, the user can set all the input information (which will be
+later specified throughout a `Tutorial_`) in a configuration file, i.e. the
+file with the `.ini` extention. \
+This regards the name of the main data folder and the sample file
+name, the folder and file names of the `.poni` and the mask, all the
+intetgration and plotting ranges and the plotting colormap.\
 To run the desired file with the chosen configuration file, the user can use
 the command in the command line
 ```
 python3 Image_treatment.py --config=<configuration_file_name>
 ```
-or with
+or
 ```
 run Image_treatment.py --config=<configuration_file_name>
 ```
-if you are in Spyder. `<confi_file_name>` is the name, without the
+if they are in Spyder. `<confi_file_name>` is the name, without the
 `.ini` extention, of the configuration file. This is done in order to keep
 track of the input settings given to the program, but it is optional, with
-the default value of `configuration_settings`.
+the default value of `configuration_settings`. 
+
 
 ## Structure
-The library is divided in 2 modules:
-
+The library is divided in 2 modules:\
 [Image_treatment.py]()
 consists of the worflow for data extreactiona and general plotting of the
 edf file (raw data). It can perform the addition of repetition files, step
